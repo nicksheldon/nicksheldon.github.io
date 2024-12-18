@@ -7,8 +7,17 @@
     <style>
         body { 
             font-family: Arial, sans-serif; 
-            margin: 20px; 
+            margin: 0; 
             background-color: #add8e6; /* Pale blue color */
+            display: flex;
+            justify-content: center;
+        }
+        .container {
+            max-width: 800px;
+            width: 100%;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
         header { 
             background-color: #cccccc; 
@@ -18,28 +27,30 @@
     </style>
 </head>
 <body>
-    <header>
-        <h1>Nicholas Sheldon</h1>
-        <a href="contact.html">Contact</a>
-    </header>
-    <section id="bio">
-        <h2>Bio</h2>
-        <p>I am a third year Computer Science Major and Mathematics Minor at 
-            Clarkson University. With a strong foundation in languages such as C, 
-            C++, x86 Assembly, Java, and Haskell, I am eager to apply my skills 
-            to real-world problems. At Clarkson, I have excelled in courses such as 
-            Computer Organization, Data Structures & Algorithms, Computer Vision, 
-            and Artificial Intelligence. I am particularly interested in developing 
-            my skills with low-level languages and AI.</p>
-    </section>
-    <section id="education">
-        <h2>Education</h2>
-        <p>Clarkson University - Potsdam, NY<br>
-           Major in Computer Science; Minor in Mathematics - December 2025<br><p>
-    </section>
-    <section id="projects">
-        <h2>Projects</h2>
-        <p>Fill in here</p>
-    </section>
+    <div class="container">
+        <header>
+            <h1>Nicholas Sheldon</h1>
+            <a href="contact.html">Contact</a>
+        </header>
+        <section id="bio">
+            <h2>Bio</h2>
+            <p>I am a third year Computer Science Major and Mathematics Minor at 
+                Clarkson University. With a strong foundation in languages such as C, 
+                C++, x86 Assembly, Java, and Haskell, I am eager to apply my skills 
+                to real-world problems. At Clarkson, I have excelled in courses such as 
+                Computer Organization, Data Structures & Algorithms, Computer Vision, 
+                and Artificial Intelligence. I am particularly interested in developing 
+                my skills with low-level languages and AI.</p>
+        </section>
+        <section id="education">
+            <h2>Education</h2>
+            <p>Clarkson University - Potsdam, NY<br>
+               Major in Computer Science; Minor in Mathematics - December 2025<br><p>
+        </section>
+        <section id="projects">
+            <h2>Projects</h2>
+            <p>Fill in here</p>
+        </section>
+    </div>
 </body>
 </html>
