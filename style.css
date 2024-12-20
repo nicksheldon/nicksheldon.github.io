@@ -16,7 +16,6 @@ body{
 
 .container{
     margin:0% 10%;
-    background-color: rgb(197, 237, 224);
 }
 
 .header-box{
@@ -32,21 +31,35 @@ body{
 }
 
 
-.nav-bar{
-    margin:0% 20%;
-    padding:0px;
+#navigation{
+	text-align: center;
+	position: relative;
+	background:rgba(255,255,255,0.5);
+    background-color: white;
+	font-family: 'Open Sans Condensed', sans-serif;
+	width: 100%;
+	font-size: 16px;
+	padding-top: 1%;
+	padding-bottom: 1%;
+    border-bottom:1px solid #e7e7e7;
+	height: 10%;
+	z-index: 10;
 }
 
-.nav-button{
-    padding:0px;
-    float:left;
-    width:33.3%;
-    box-sizing: border-box;
-    border:3px dotted #f00;
-    text-align: center;
-    border-radius:15px;
+ul {
+    list-style-type: none;
+    display: inline;
+    margin: 0;
+    padding: 0;
 }
 
-#bio{
-    margin-top:100px;
+li {
+	display: inline;
+}
+
+
+
+
+#rest{
+    background-color: white;
 }
