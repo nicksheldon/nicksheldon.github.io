@@ -10,7 +10,8 @@ body{
     line-height:1.6em;
     margin: 0;
 
-    background-color: bisque;
+    background-image: url("images/backdrop.jpg");
+    background-size: cover;
 }
 
 .container{
