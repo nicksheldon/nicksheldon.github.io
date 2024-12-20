@@ -1,5 +1,6 @@
-#portfolio{
-    padding-top: 10px;
-    margin-left: 15px;
-    margin-bottom:200px;
+#portfolio {
+    padding: 5%;
+    width: 65%;
+    background-color: #f4feff;
+    box-sizing: border-box;
 }
