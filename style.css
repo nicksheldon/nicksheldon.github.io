@@ -9,4 +9,24 @@ body{
 
     line-height:1.6em;
     margin: 0;
+
+    background-color: bisque;
+}
+
+.container{
+    margin:0% 10%;
+    background-color: aquamarine;
+}
+
+.header-box{
+    text-align: center;
+    background-color: #77aa77;
+    color:black;
+    padding:20;
+    border:5px black solid;
+}
+.header-box h1{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 45px;
+    
 }
