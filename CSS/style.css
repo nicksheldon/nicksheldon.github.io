@@ -1,58 +1,57 @@
-body{
-    color:#000;
-    font-family:'Open Sans Condensed', sans-serif;
-    font-size:16px;
-    font-weight:normal;
-    /* font: normal 16px Arial, Helvetica, sans-serif;      A shorted way of doing it*/
-
-    line-height:1.6em;
+body {
+    color: #000;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.6em;
     margin: 0;
-
     background-image: url("../images/backdrop.jpg");
     background-size: cover;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-.container{
-    margin:0% 13%;
+.container {
+    margin: 0% 15%;
     background-color: #f4feff;
-    /* padding-bottom: 100px; */
+    display: flex;
+    flex-direction: column;
+    flex: 1;
 }
 
 /* ------------------------------------------------------------------------ */
 
-.header-box{
+.header-box {
     text-align: center;
-    color:black;
-    padding:20px;
-    /* border:5px black solid; */
+    color: black;
+    padding: 20px;
 }
-.header-box h1{
+
+.header-box h1 {
     font-size: 45px;
-    line-height:1em;
+    line-height: 1em;
 }
 
 /* ------------------------------------------------------------------------ */
 
-#navigation{
-	text-align: center;
-	position: relative;
-	/* background:rgba(255,255,255,0.5); */
-	font-family: 'Open Sans Condensed', sans-serif;
-	width: 100%;
-	font-size: 16px;
-	padding-top: 1.5%;
-	padding-bottom: 1.5%;
-    border-top:1px solid #000;
-    border-bottom:1px solid #000;
-	height: 10%;
-	/* z-index: 10; */
-    
+#navigation {
+    text-align: center;
+    position: relative;
+    font-family: 'Open Sans Condensed', sans-serif;
+    width: 100%;
+    font-size: 16px;
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    height: 10%;
 }
 
 #navigation a {
-	text-decoration: none;
-	color: black;
-    padding: 25px;
+    text-decoration: none;
+    color: black;
+    padding: 15px;
 }
 
 ul {
@@ -63,33 +62,42 @@ ul {
 }
 
 li {
-	display: inline;
+    display: inline;
 }
 
-li:hover {
-    /* font-size: 115%; */
-    background-color: #ccc;
-    padding: 1.5% 0%;
-    border-radius:15px;
-}
-
-
-/* ------------------------------------------------------------------------ */
-
-
-#rest{
+#rest {
     padding-top: 10px;
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
 }
 
-#about{
-    padding-top: 10px;
-    margin-left: 15px;
-    margin-bottom:200px;
+#about {
+    padding: 5%;
+    width: 65%;
+    background-color: #f4feff;
+    box-sizing: border-box;
 }
 
-#footer{
-    padding-top: 1.5%;
+#sidepic {
+    padding: 5%;
+    width: 30%;
+    box-sizing: border-box;
+}
+
+#sidepic img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+#footer {
+    text-align: center;
+    background-color: #f4feff;
     border-top: 1px solid black;
+    padding-top: 20px;
     padding-bottom: 20px;
     font-size: 12px;
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
 }
