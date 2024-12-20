@@ -97,13 +97,45 @@ li:hover{
 }
 
 #footer {
-    text-align: center;
+    padding-left:5%;
+    text-align: left;
     background-color: #f4feff;
     border-top: 1px solid black;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    font-size: 12px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     width: 100%;
     margin: 0 auto;
     box-sizing: border-box;
 }
+
+
+
+
+
+
+/* Style all font awesome icons */
+.fa {
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 35%;
+    background: black;
+    color:white;
+  }
+  
+  /* Add a hover effect if you want */
+  .fa:hover {
+    opacity: 0.7;
+  }
+
+  .fa-linkedin {
+    background: #0a66c2;
+    color: white;
+  }
+
+  .fa-github {
+    background: #24292e;
+    color: white;
+    margin-left: 20px;
+  }
+
