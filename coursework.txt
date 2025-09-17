@@ -1,0 +1,7 @@
+coursework:
+
+Computer Architecture | Computer Vision | Artificial Intelligence | Algorithms & Data Structures | Operating Systems
+Object Oriented Programming | Database Design & Management | Compiler Construction | Software Design & Development
+High Performance Computing | Machine Learning | Functional Programming | Wireless Networks | Linear Algebra
+
+other?
