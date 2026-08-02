@@ -1,72 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Nicholas Sheldon</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nicholas Sheldon — Experience</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="CSS/style.css">
-    <link rel="stylesheet" type="text/css" href="CSS/portfolio.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
+<body>
+    <div class="container">
 
-<div class="container">
-
-    <div class="header-box">
-        <h1>Nicholas Sheldon</h1>
-    </div>
-
-    <div id="navigation">
-        <ul>
-                <li><a href="index.html">About</a></li>
-                <li><a href="experience.html">Experience</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="coursework.html">Coursework</a></li>
-                <li><a href="contact.html"></i>Contact</a></li>
-        </ul>
-    </div>
-
-    <div id="rest">
-        <div id="about">
-            <h2>Experience</h2>
-            <div id="experience-project">
-                <p id="experience-project-title">Huntington Ingalls Industries</p>
-                <p id="experience-project-subtitle">Software Engineering Intern</p>
-                <p id="experience-project-dates">Summer 2025</p>
-                <ul>
-                    <li>Led software engineering intern team to develop a software-defined radio capture and jamming platform</li>
-                    <li>Integrated C modules for autonomous UAV behaviors using real-time machine learning inference and computer vision</li>
-                    <li>Developed software-in-the-loop workflows with Gazebo to validate autonomy features pre-flight</li>
-                    <li>Bridged RF systems configuration with multithreaded SDR control software to deliver end-to-end workflows</li>
-                </ul>
-            </div>
-            
-            <div id="experience">
-                <p id="experience-project-title">Clarkson University</p>
-                <p id="experience-project-subtitle">Undergraduate Researcher</p>
-                <p id="experience-project-dates">Spring 2025</p>
-                <p id="experience-project-header">Artificial Intelligence Scheduling Research</p>
-                <ul>
-                    <li>Implemented schedule building using Hill Climbing, Genetic, Simulated Annealing, and other local/CSP algorithms</li>
-                    <li>Encoded problems in SMT format and used SAT/SMT solvers (Z3) to search for solutions</li>
-                    <li>Designed a preprocessing phase to efficiently solve in larger search spaces with minimal loss of optimality</li>
-                    <li>Worked with high school admin to obtain data and adhere to scheduling constraints</li>
-                </ul>
+        <header class="site-header">
+            <div class="header-box">
+                <h1>Nicholas Sheldon</h1>
+                <p class="tagline">agentic ai engineer, mainframe systems <span class="accent">/</span> ibm</p>
             </div>
 
-            <div id="experience">
-                <p id="experience-project-title">Clarkson University Climbing Wall</p>
-                <p id="experience-project-subtitle">Director</p>
-                <p id="experience-project-dates">Spring 2024 - Present</p>
+            <nav id="navigation">
                 <ul>
-                    <li>Trained and managed teams of up to 28 employees each semester</li>
-                    <li>Supervised daily operations and maintenance; ensured compliance with risk management plan</li>
+                    <li><a href="index.html">About</a></li>
+                    <li><a href="experience.html" class="active">Experience</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
+            </nav>
+        </header>
+
+        <div id="rest">
+            <div id="about">
+                <h2>Experience</h2>
+
+                <div class="entry">
+                    <p class="entry-title">IBM</p>
+                    <p class="entry-subtitle">Agentic AI Engineer, Mainframe Systems</p>
+                    <p class="entry-dates">Spring 2026 – Present</p>
+                    <ul>
+                        <li>Building agentic AI systems that help modernize and operate IBM Z mainframe environments</li>
+                    </ul>
+                </div>
+
+                <div class="entry">
+                    <p class="entry-title">Huntington Ingalls Industries</p>
+                    <p class="entry-subtitle">Software Engineering Intern</p>
+                    <p class="entry-dates">Summer 2025</p>
+                    <ul>
+                        <li>Led software engineering intern team to develop a software-defined radio capture and jamming platform</li>
+                        <li>Integrated C modules for autonomous UAV behaviors using real-time machine learning inference and computer vision</li>
+                        <li>Developed software-in-the-loop workflows with Gazebo to validate autonomy features pre-flight</li>
+                        <li>Bridged RF systems configuration with multithreaded SDR control software to deliver end-to-end workflows</li>
+                    </ul>
+                </div>
+
+                <div class="entry">
+                    <p class="entry-title">Clarkson University</p>
+                    <p class="entry-subtitle">Undergraduate Researcher</p>
+                    <p class="entry-dates">Spring 2025</p>
+                    <p class="entry-header">Artificial Intelligence Scheduling Research</p>
+                    <ul>
+                        <li>Implemented schedule building using Hill Climbing, Genetic, Simulated Annealing, and other local/CSP algorithms</li>
+                        <li>Encoded problems in SMT format and used SAT/SMT solvers (Z3) to search for solutions</li>
+                        <li>Designed a preprocessing phase to efficiently solve in larger search spaces with minimal loss of optimality</li>
+                        <li>Worked with high school admin to obtain data and adhere to scheduling constraints</li>
+                    </ul>
+                </div>
+
+                <div class="entry">
+                    <p class="entry-title">Clarkson University Climbing Wall</p>
+                    <p class="entry-subtitle">Director</p>
+                    <p class="entry-dates">Spring 2024 – Present</p>
+                    <ul>
+                        <li>Trained and managed teams of up to 28 employees each semester</li>
+                        <li>Supervised daily operations and maintenance; ensured compliance with risk management plan</li>
+                    </ul>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div id="footer">
-        <a href="https://www.linkedin.com/in/nicholas-sheldon-845ab1320/" target="_blank" class="fa fa-linkedin"></a>
-        <a href="https://github.com/nicksheldon?tab=overview&from=2024-11-01&to=2024-11-30" target="_blank" class="fa fa-github"></a>
-    </div>
+        <footer id="footer">
+            <a href="https://www.linkedin.com/in/nicholas-sheldon-845ab1320/" target="_blank" rel="noopener" class="fa fa-linkedin" aria-label="LinkedIn"></a>
+            <a href="https://github.com/nicksheldon" target="_blank" rel="noopener" class="fa fa-github" aria-label="GitHub"></a>
+        </footer>
 
-</div>
+    </div>
+</body>
+</html>

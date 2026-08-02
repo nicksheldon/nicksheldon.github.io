@@ -1,176 +1,343 @@
+/* ---------------------------------------------------------------------- */
+/* Design tokens                                                          */
+/* ---------------------------------------------------------------------- */
+
+:root {
+    --color-bg: #ffffff;
+    --color-bg-subtle: #faf9f8;
+    --color-text: #17171a;
+    --color-text-muted: #63625f;
+    --color-border: #e7e4e0;
+    --color-accent: #ea580c;
+    --color-accent-hover: #c2410c;
+
+    --font-sans: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --font-mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+
+    --max-width: 720px;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-bg: #0c0c0d;
+        --color-bg-subtle: #17171a;
+        --color-text: #f2f1ee;
+        --color-text-muted: #a19f9a;
+        --color-border: #2a2a2c;
+        --color-accent: #fb923c;
+        --color-accent-hover: #fdba74;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* ---------------------------------------------------------------------- */
+/* Base                                                                   */
+/* ---------------------------------------------------------------------- */
+
 body {
-    color: #000;
-    font-family: 'Open Sans Condensed', sans-serif;
-    font-size: 16px;
-    font-weight: normal;
-    line-height: 1.6em;
     margin: 0;
-    background-image: url("../images/backdrop.jpg");
-    background-size: cover;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-sans);
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 1.7;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    color: inherit;
+}
+
+a:focus-visible,
+li:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
 }
 
 .container {
-    margin: 0% 15%;
-    background-color: #f4feff;
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 24px;
     display: flex;
     flex-direction: column;
     flex: 1;
 }
 
-/* ------------------------------------------------------------------------ */
+/* ---------------------------------------------------------------------- */
+/* Header + identity                                                      */
+/* ---------------------------------------------------------------------- */
 
-.header-box {
-    text-align: center;
-    color: black;
-    padding: 20px;
+.site-header {
+    padding: 64px 0 32px;
 }
 
 .header-box h1 {
-    font-size: 45px;
-    line-height: 1em;
+    font-size: 32px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    margin: 0;
 }
 
-/* ------------------------------------------------------------------------ */
+.tagline {
+    font-family: var(--font-mono);
+    font-size: 14px;
+    color: var(--color-text-muted);
+    margin: 8px 0 0;
+    letter-spacing: 0.01em;
+}
+
+.tagline .accent {
+    color: var(--color-accent);
+}
+
+/* ---------------------------------------------------------------------- */
+/* Navigation                                                             */
+/* ---------------------------------------------------------------------- */
 
 #navigation {
-    text-align: center;
-    position: relative;
-    font-family: 'Open Sans Condensed', sans-serif;
-    width: 100%;
-    font-size: 16px;
-    padding-top: 1.5%;
-    padding-bottom: 1.5%;
-    border-top: 1px solid #000;
-    border-bottom: 1px solid #000;
-    height: 10%;
+    margin-top: 28px;
+    padding-top: 20px;
+    border-top: 1px solid var(--color-border);
+}
+
+#navigation ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin: 0;
+    padding: 0;
 }
 
 #navigation a {
     text-decoration: none;
-    color: black;
-    padding: 15px;
+    color: var(--color-text-muted);
+    font-size: 15px;
+    font-weight: 400;
+    padding-bottom: 4px;
+    border-bottom: 1px solid transparent;
+    transition: color 0.15s ease, border-color 0.15s ease;
 }
 
-
-/* Navigation menu: horizontal, no bullets */
-#navigation ul {
-    list-style-type: none;
-    display: inline;
-    margin: 0;
-    padding: 0;
+#navigation a:hover {
+    color: var(--color-text);
 }
 
-#navigation li {
-    display: inline;
+#navigation a.active {
+    color: var(--color-text);
+    border-bottom-color: var(--color-accent);
 }
 
-/* Content lists (like coursework): vertical with default bullets */
+/* ---------------------------------------------------------------------- */
+/* Main content                                                           */
+/* ---------------------------------------------------------------------- */
+
+#rest {
+    flex: 1;
+    padding: 8px 0 48px;
+}
+
+#about h2 {
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-text-muted);
+    margin: 0 0 24px;
+}
+
+#about h3 {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0 0 12px;
+}
+
+#about h3 a {
+    text-decoration: none;
+    border-bottom: 1px solid var(--color-border);
+    transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+#about h3 a:hover {
+    color: var(--color-accent);
+    border-color: var(--color-accent);
+}
+
+#about p {
+    margin: 0 0 18px;
+}
+
+#about p:last-child {
+    margin-bottom: 0;
+}
+
+.hero {
+    display: flex;
+    gap: 32px;
+    align-items: flex-start;
+    margin-bottom: 12px;
+}
+
+.hero .avatar {
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+    border: 1px solid var(--color-border);
+}
+
+.hero-copy {
+    flex: 1;
+    min-width: 0;
+}
+
+/* Content lists (e.g. bullet detail within a section) */
 #about ul {
-    list-style-position: outside; /* bullets outside the content box */
-    list-style-type: disc; /* use standard filled circle bullets */
-    margin: 0 0 1em 1.25em; /* give some left indent and spacing */
+    list-style: none;
+    margin: 0 0 1em;
     padding: 0;
 }
 
 #about li {
-    display: list-item; /* ensure items are vertical */
-    margin: 0.25em 0; /* small vertical spacing between items */
+    position: relative;
+    padding-left: 18px;
+    margin: 0.4em 0;
 }
 
-#navigation li:hover{
-    background-color: #ddf;
-    padding: 1.5% 0%;
-    border-radius:15px;
+#about li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.72em;
+    width: 6px;
+    height: 1px;
+    background: var(--color-accent);
 }
 
-#rest {
-    padding-top: 10px;
-    flex: 1;
+/* ---------------------------------------------------------------------- */
+/* Experience / Portfolio entries                                        */
+/* ---------------------------------------------------------------------- */
+
+.entry {
+    padding: 28px 0;
+    border-top: 1px solid var(--color-border);
+}
+
+.entry:first-of-type {
+    border-top: none;
+    padding-top: 0;
+}
+
+.entry-title {
+    font-size: 17px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.entry-subtitle {
+    font-size: 15px;
+    color: var(--color-text-muted);
+    margin: 2px 0 0;
+}
+
+.entry-dates {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--color-text-muted);
+    margin: 6px 0 14px;
+    letter-spacing: 0.02em;
+}
+
+.entry-header {
+    font-size: 15px;
+    font-weight: 500;
+    margin: 0 0 10px;
+}
+
+.tech-tags {
+    list-style: none;
     display: flex;
     flex-wrap: wrap;
+    gap: 8px;
+    margin: 14px 0 0 !important;
+    padding: 0;
 }
 
-#about {
-    padding: 5%;
-    width: 65%;
-    background-color: #f4feff;
-    box-sizing: border-box;
+.tech-tags li {
+    padding: 3px 10px !important;
+    margin: 0 !important;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--color-text-muted);
+    border: 1px solid var(--color-border);
+    border-radius: 100px;
 }
 
-#sidepic {
-    padding: 5%;
-    width: 30%;
-    box-sizing: border-box;
+.tech-tags li::before {
+    display: none;
 }
 
-#sidepic img {
-    width: 100%;
-    border-radius: 15px;
-}
+/* ---------------------------------------------------------------------- */
+/* Footer                                                                 */
+/* ---------------------------------------------------------------------- */
 
 #footer {
-    padding-left:5%;
-    text-align: left;
-    background-color: #f4feff;
-    border-top: 1px solid black;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    width: 100%;
-    margin: 0 auto;
-    box-sizing: border-box;
+    padding: 24px 0 48px;
+    border-top: 1px solid var(--color-border);
+    display: flex;
+    gap: 16px;
 }
 
-#experience-project-title {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: -12px;
-}
-
-#experience-project-subtitle {
-    font-style: italic;
-    font-size: 16px;
-    margin-bottom: -12px;
-}
-
-#experience-project-dates {
-    font-size: 14px;
-    margin-bottom: 8px;
-}
-
-#experience-project {
-    margin-bottom: 25px;
-}
-
-#experience-project-header {
-    margin: -1px 0;
-}
-
-/* Style all font awesome icons */
 .fa {
-    padding: 10px;
+    width: 36px;
+    height: 36px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
     text-decoration: none;
-    border-radius: 35%;
-    background: black;
-    color:white;
-  }
-  
-  /* Add a hover effect if you want */
-  .fa:hover {
-    opacity: 0.7;
-  }
+    border-radius: 50%;
+    background: transparent;
+    border: 1px solid var(--color-border);
+    color: var(--color-text-muted);
+    transition: color 0.15s ease, border-color 0.15s ease;
+}
 
-  .fa-linkedin {
-    background: #0a66c2;
-    color: white;
-  }
+.fa:hover {
+    color: var(--color-accent);
+    border-color: var(--color-accent);
+    opacity: 1;
+}
 
-  .fa-github {
-    background: #24292e;
-    color: white;
-    margin-left: 20px;
-  }
+/* ---------------------------------------------------------------------- */
+/* Responsive                                                             */
+/* ---------------------------------------------------------------------- */
 
+@media (max-width: 560px) {
+    .site-header {
+        padding: 40px 0 24px;
+    }
+
+    .header-box h1 {
+        font-size: 26px;
+    }
+
+    .hero {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .hero .avatar {
+        width: 96px;
+        height: 96px;
+    }
+}
